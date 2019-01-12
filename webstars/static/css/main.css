@@ -1,0 +1,92 @@
+body {
+    background-image: url('../img/boardtable.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    /* opacity: .7; */
+    
+}
+
+#header {
+    background: url('../img/nice.jpg');
+    opacity: .7;
+    transition: 1s all ease-in-out;
+}
+
+.header:hover {
+    opacity: 1.5;
+
+}
+
+
+h1 {
+    color: brown;
+}
+
+body img{
+    width: 100%;
+    height: 100%;
+    margin: 0% !important;
+    position: relative;
+    /* color: rgba(0, 0, 0, .6); */
+    opacity: .7;
+    
+}
+
+body h1{
+    position: absolute;
+}
+
+.login  {
+    height: 80%;
+    width: 50%;
+}
+
+.signup  {
+    max-height: 100vh;
+    width: 50%;
+}
+
+/* .signup:hover{
+    opacity: ;
+} */
+
+ul li{
+    display: inline;
+}
+
+li a{
+    border: 1px solid gray;
+    border-radius: 10%;
+    text-align: center;
+    transition: 1s all ease-in-out;    
+}
+
+li a:active{
+    background-color: whitesmoke;
+}
+
+li a:hover {
+
+    background-color: burlywood;
+    transform: scale(1.1);
+    color: black;
+    text-shadow: 1rem;
+    text-emphasis: size;
+
+}
+
+.form-hover{
+    opacity: .7;
+    transition: 1s all ease-in-out;
+}
+
+.form-hover:hover{
+    transform: scale(1.1);
+    opacity: 2.0;
+    color: black;
+    
+
+}

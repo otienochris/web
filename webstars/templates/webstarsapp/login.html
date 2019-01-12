@@ -1,0 +1,40 @@
+{% extends 'webstarsapp/base.html' %}
+
+{% block head %} 
+<title>WEBSTARS | Login</title>
+{% endblock head %}
+{% block content %} 
+
+<div class="container " id="login">
+    <div class="row">
+        <div class="col-md-10 ">
+            <form action="." method="post" class="form-hover bg-light p-5 align-content-lg-center">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="username" class=" text-muted text-uppercase"> username </label>
+                    <input type="text" name="username" id="username" class=" form-text ">
+                </div>
+                <div class="form-group" >
+                    <label for=" password " class=" text-muted text-uppercase"> password </label>
+                    <input type="password" name="username" id="username" class=" form-text ">
+                </div>
+                <div class="form-group">
+                    <a href="/profile"><button type="submit" class=" btn btn-outline-primary text-uppercase"> login </button>
+                    </a>
+                </div>
+
+                <div class="text-muted">
+                    <small>Don't have an account? <a href="/signup">signup</a></small>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<form action="." method="post">
+
+</form>
+
+{% endblock content %}

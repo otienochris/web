@@ -1,0 +1,34 @@
+{% extends 'webstarsapp/base.html' %}
+{% load crispy_forms_tags %}
+{% block head %}
+
+<title class=" text-capitalize ">WEBSTARS | Signup </title>
+
+
+{% endblock head %}
+{% block content %} 
+
+<div class="container signup ">
+    <div class="row">
+        <div class="col-md-10 ">
+            <form action="." method="post" class="form-hover  bg-light p-5 align-content-center">
+                {% csrf_token %}
+
+                <div class="form-text text-primary text-center p-2">join today</div>
+                <br>
+                <hr>
+                {{form|crispy}}
+                <button type="submit" class=" btn btn-outline-primary text-uppercase"> signup</button>
+                <br>
+                <hr>
+                <div class="text-muted ">
+                    <small>Have an account? <a href="/login">login</a></small>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+<div>
+
+{% endblock content %}
