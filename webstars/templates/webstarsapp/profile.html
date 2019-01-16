@@ -1,43 +1,62 @@
 {% extends 'webstarsapp/base.html' %}
+{% load crispy_forms_tags %}
 {% block head %} 
 
 <title class=" text-capitalize ">WEBSTARS | Profile </title>
 
 
 {% endblock head %}
-<!-- <section>
-    <div class="container">
-        <div class="row">
-            <div class="">
-                {% if messages %}
-                    {% for message in messages %}
-                       <div class="alert alert-{{ message.tags }}">
-                           {{ message }}
-                       </div>
-                    {% endfor %}
-               {% endif %}
-            </div>
-        </div>col-md-8
-    </div>
-</section> -->
+
 {% block content %}
 
-<section>
-        <div class="container">
-            <div class="row">
-                <div class="">
-                    {% if messages %}
-                        {% for message in messages %}
-                           <div class="alert alert-{{ message.tags }}">
-                               {{ message }}
-                           </div>
-                        {% endfor %}
-                   {% endif %}
-                </div>
-            </div>col-md-8
+    
+
+<div class="content-section float-right">
+    <div class="media d-block">
+        <img  src=" {{ user.profile.image.url }} " alt="Profile" class=" float-right rounded-circle account-img">
+        <div class="media-body">
+            <h2 class="account-heading text-info float-right">{{user.username}}</h2>
+            <p class="text-info">{{ user.email }}</p>    
         </div>
-    </section>
-<!-- insert the body contents here -->
+        <!-- form here -->
+    </div>
+</div>
+<div>
+
+<section>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg-10 mx-auto align-items-center">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+    <form action="." method="post" enctype="multipart/form-data" class="my-5  position-absolute form-hover bg-light p-5 ">
+        {% csrf_token %}
+
+        <div class='align-content-center'>
+            <div class="form-text text-primary text-center p-2">profile info:</div>
+
+            {{u_form|crispy}}
+            {{p_form|crispy}}
+            
+            <button type="submit" class="mt-3 btn btn-outline-primary text-uppercase"> update </button>
+            <br>
+            <hr>
+            <div class="text-muted ">
+                <small>Have an account? <a href="{% url 'login' %}">login</a></small>
+            </div>
+        </div>                
+    </form>
+</div>
 
 
 

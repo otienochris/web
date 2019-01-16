@@ -1,0 +1,25 @@
+{% extends 'webstarsapp/base.html' %}
+
+{% block head %} 
+<title>WEBSTARS | Login</title>
+{% endblock head %}
+{% block content %} 
+
+<div class="col-12">
+
+    <div class="container-fluid">
+            <h1  class="info">You've logged out.</h1>
+        <form action="." method="POST">
+            {% csrf_token %}
+            <button type="submit">logout</button>
+        </form>
+    </div>
+</div>
+<div class="container">
+        <span>
+            <a href="{% url 'login' %}">login again</a>
+        </span>
+</div>
+
+
+{% endblock content %}

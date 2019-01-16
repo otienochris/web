@@ -13,20 +13,30 @@
     {% block head %}    {% endblock head %}
 </head>
 <body>
-    <section id="header">
-        <div class="navbar navbar-default navbar-fixed-top navbar-dark bg-dark ">
-            <div class="container justify-content-between">
-                <div class="navbar-brand text-uppercase text-muted mx-0 mt-1 mb-5 align-text-top bg-dark "><h1>webstarsapp</h1>
+    <section id="header" >
+        <div class="container ">
+            <div class="row navbar navbar-default navbar-fixed-top navbar-dark bg-dark justify-content-between border-dark ">
+                <div class="col-sm-6 ">
+                    
+                    <div class=" title-lable">
+                        <div class="navbar-brand text-uppercase text-muted mx-0 mt-1 mb-5 align-text-center bg-transparent "><h1 class=" font-weight-bolder">webstars</h1>
+                        </div>
+                    </div>
                 </div>
 
+                <div class="col-sm-6">
+                <div class=" links m-2 float-md-right">
+                    <ul class=" nav navbar-nav d-flex justify-content-between ">
+                        <li class="active "><a href="/" class="nav-link text-info text-uppercase m-2 ">Home</a></li>
+                        <li> <a href="/login" class="nav-link text-info text-uppercase m-2">login/signup</a></li>
+                        <li><a href="/profile" class="nav-link text-info text-uppercase m-2">profile</a></li>
+                    </ul>
+                </div>
+                </div>
+
+            </div>
+            
                 <!-- <div id="navbar" class="collapse navbar-collapse    " > -->
-                   <div class=" links ">
-                        <ul class=" nav navbar-nav d-flex justify-content-between">
-                            <li class="active "><a href="/" class="nav-link text-info text-uppercase m-2 ">Home</a></li>
-                            <li> <a href="/login" class="nav-link text-info text-uppercase m-2">login/signup</a></li>
-                            <li><a href="/profile" class="nav-link text-info text-uppercase m-2">profile</a></li>
-                        </ul>
-                   </div>
                 <!-- </div> -->
                     
                 
@@ -41,10 +51,10 @@
         
                         </div>
                    </div> -->
+                   <!-- </div> -->
+                   <!-- </div> -->
+                   
 
-                
-            </div>
-        </div>
         </section>
         {% block header %}      {% endblock header %}
 
